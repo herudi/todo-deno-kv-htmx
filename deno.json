@@ -1,0 +1,23 @@
+{
+  "tasks": {
+    "dev": "deno run -A --watch ./main.tsx --dev",
+    "tailwind": "deno run -A ./tailwind.ts --build",
+    "start": "deno run -A ./main.tsx"
+  },
+  "unstable": ["kv"],
+  "imports": {
+    "@nhttp/nhttp": "jsr:@nhttp/nhttp@^2.0.2",
+    "@nhttp/tailwind": "jsr:@nhttp/tailwind@^2.0.2",
+    "@std/ulid": "jsr:@std/ulid@^0.224.1",
+    "@tailwindcss/forms": "npm:@tailwindcss/forms@^0.5.7"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "@nhttp/nhttp/jsx",
+    "lib": [
+      "deno.window",
+      "deno.unstable",
+      "DOM"
+    ]
+  }
+}
