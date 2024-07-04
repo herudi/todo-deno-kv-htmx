@@ -68,7 +68,7 @@ const TodoItem: FC<ITodo> = ({ id, text }) => {
           hx-delete={`/todo/${id}`}
           hx-swap="delete"
           hx-target={`#${todoId}`}
-          hx-confirm="Are you sure ?"
+          hx-confirm={`Are you sure to delete ${text} ?`}
           class="text-red-500 hover:text-red-700 mr-2 delete-btn"
         >
           Delete
@@ -111,9 +111,19 @@ const Todo: FC<{ todos: ITodo[] }> = ({ todos }) => {
   };
   return (
     <div class="container mx-auto my-10" id="todo">
-      <h1 class="text-center text-3xl font-semibold mb-4">
-        To Do List
-      </h1>
+      <div class="mb-4 text-center">
+        <h1 class="text-3xl font-semibold ">
+          To Do List
+        </h1>
+        <p>To do list Deno KV and Htmx</p>
+        <a
+          target="blank"
+          href="https://github.com/herudi/todo-deno-kv-htmx"
+          class="text-blue-500"
+        >
+          Github {">>"}
+        </a>
+      </div>
       <div class="md:w-1/2 mx-auto">
         <div class="bg-white shadow-md rounded-lg p-6">
           <TodoForm
