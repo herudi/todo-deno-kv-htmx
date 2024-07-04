@@ -179,6 +179,7 @@ app.get("/", async () => {
   return (
     <>
       <Helmet>
+        <title>Todo List Deno KV and Htmx</title>
         <link rel="stylesheet" href="/assets/css/style.css" />
         <body class="bg-gray-100" />
       </Helmet>
